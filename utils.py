@@ -88,7 +88,7 @@ class generator(Sequence):
   
   def __getitem__(self, idx):
     """
-    Returns the images tensors and their labels
+    Returns the images tensors and their labels after carrying out the transformations specified to the images.
     """
     label_matrix = self.create_label()
 
@@ -137,6 +137,10 @@ def train_val_test(df, train_size = 0.7, validation = True):
     return df_train, df_test
 
 def cnn_1(learning_rate = 1e-4, input_shape = (300, 300, 1)):
+  """
+  Defines the Convolutional Neural Network. Uncomment the blocks that are desired to incorporate to the network in order to increase its complexity. Beware
+  of overfitting!
+  """
   inputs = Input(shape = input_shape)
 
   x = BatchNormalization()(inputs)
@@ -166,11 +170,11 @@ def cnn_1(learning_rate = 1e-4, input_shape = (300, 300, 1)):
   
   model = Model(inputs = inputs, outputs = x)
 
-  print('Compilando modelo...')
+  print('Compiling model...')
   model.compile(loss = CategoricalCrossentropy(from_logits = False),
                 optimizer = Adam(learning_rate = learning_rate),
                 metrics = ['accuracy'])
-  print('¡Modelo compilado!')
+  print('Model compiled!')
 
   return model
 
@@ -206,6 +210,10 @@ def train_model(model, df_train , df_val, im_size, explore_lr = False, epochs = 
                     )
   
   return history
+
+def save_weights(model):
+   from datetime import date, time
+   model.save_weights('cnn_weights_'+str(date.today())+'.hdf5')
 
 # Pretty confusion matrix
 
