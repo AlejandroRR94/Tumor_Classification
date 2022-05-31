@@ -16,5 +16,7 @@ The original dataset was shared by Jun Cheng: Cheng, Jun (2017): brain tumor dat
 
 
 Notes:
+* The model was trained in Google Colab using the GPU available.
+  * the weights were used in vscode to make the predictions, hence the absence of the training iterations.
 * All used functions in the "Training___Evaluation" notebook are defined in the "utils.py" script
 
