@@ -14,6 +14,9 @@ This dataset contains images for 3 classes of brain tumor:
 
 The original dataset was shared by Jun Cheng: Cheng, Jun (2017): brain tumor dataset. figshare. Dataset. https://doi.org/10.6084/m9.figshare.1512427.v5
 
+To have the data organized exactly as this project did:
+1. Download the data
+2. Extract the data in a "data/" folder
 
 Notes:
 * The model was trained in Google Colab using the GPU available.
