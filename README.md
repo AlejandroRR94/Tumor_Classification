@@ -9,8 +9,13 @@ The data used for this mini project was taken from the Kaggle Brain Tumor datase
 This dataset contains images for 3 classes of brain tumor:
 
 * meningioma(1)
+ * ![423](https://user-images.githubusercontent.com/60507154/171852556-3af61227-d0c3-46f9-8a68-19f718ad3a24.png)
+
 * glioma(2)
+ * ![2](https://user-images.githubusercontent.com/60507154/171852714-40e30fb9-00bf-4508-b52e-60be0decc2ac.png)
+ 
 * pituitary tumor(3)
+ * ![922](https://user-images.githubusercontent.com/60507154/171852767-2f3eb37d-0b11-43e3-852c-b759e33cf44c.png)
 
 The original dataset was shared by Jun Cheng: Cheng, Jun (2017): brain tumor dataset. figshare. Dataset. https://doi.org/10.6084/m9.figshare.1512427.v5
 
